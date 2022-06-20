@@ -1,0 +1,95 @@
+//*
+Update [таблица импортированная]
+Set Клиент = ID 
+From Client
+Where Клиент = FirstName
+
+Insert into Client
+Select все поля, все поля
+From [таблица импортированная]
+
+//бд
+
+*Users
+ID	          int	                    Unchecked
+IdNumber	int	                    Unchecked
+FirstName	nvarchar(50)	          Unchecked
+LastName	nvarchar(50)	          Checked
+Patronymic	nvarchar(50)	          Checked
+GenderId	int	                    Unchecked
+Email	          nvarchar(50)	          Unchecked
+Phone	          nvarchar(25)	          Unchecked
+DirectionId	int	                    Checked
+PhotoPath	nvarchar(MAX)	Checked
+Password	nvarchar(50)	          Unchecked
+RoleId	int	                    Unchecked
+
+*Events
+ID	          int	                    Unchecked
+Name	          nvarchar(MAX)	Unchecked
+StartEvent	datetime	          Unchecked
+EndEvent	datetime	          Unchecked
+DirectionId	int	                    Unchecked
+CityId	          int	                    Unchecked
+PhotoPath	nvarchar(MAX)	Checked
+
+*ActivityEvents
+ID	          int	                    Unchecked
+EventId	int	                    Unchecked
+ActivityId	int	                    Unchecked
+Time	          time(7)	          Unchecked
+
+*Activity
+ID	          int	                     Unchecked
+Name	          nvarchar(MAX)	 Unchecked
+
+*UserActivity
+ID	          int	                     Unchecked
+UserId	int	                     Unchecked
+ActivityId	int	                     Unchecked
+
+*City
+ID	         int	                     Unchecked
+Name	         nvarchar(100)	 Unchecked
+
+*UserEvent
+ID	          int	                      Unchecked
+EventId	int	                      Unchecked
+UserId	int	                      Unchecked
+
+*Country
+ID	          int	                      Unchecked
+Name	          nvarchar(100)	  Unchecked
+
+*Participant
+ID	          int	                      Unchecked
+UserId	int	                      Unchecked
+CountryId	int	                      Unchecked
+
+*UserRequest
+ID	          int	                      Unchecked
+UserId	int	                      Unchecked
+RequestId	int	                      Unchecked
+
+
+*StatusRquest
+ID	          int	                      Unchecked
+Name	          nvarchar(50)	            Unchecked
+
+*Direction
+ID	          int	                      Unchecked
+Name	          nvarchar(50)	            Unchecked
+
+*Role
+ID	          int	                      Unchecked
+Name	          nvarchar(50)	            Unchecked
+
+*Gender
+ID	          int	                      Unchecked
+Name	          nvarchar(50)	            Unchecked
+
+*ResourseActivity
+ID	                    int	                      Unchecked
+ActivityId	          int	                      Unchecked
+ResourceName	nvarchar(50)	            Unchecked
+ResourcePath	nvarchar(MAX)	  Unchecked
